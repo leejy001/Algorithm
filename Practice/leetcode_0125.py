@@ -1,4 +1,4 @@
-// 일반적인 풀이 292ms
+# 일반적인 풀이 292ms
 class Solution:
     def isPalindrome(self, s: str) -> bool:
         ss = []
@@ -12,7 +12,7 @@ class Solution:
         
         return True
 
-// Deque 이용한 풀이 52ms
+# Deque 이용한 풀이 52ms
 class Solution:
     def isPalindrome(self, s: str) -> bool:
         ss: Deque = collections.deque()
@@ -26,7 +26,7 @@ class Solution:
         
         return True
 
-// 정규 표현식 이용한 풀이 36ms
+# 정규 표현식 이용한 풀이 36ms
 class Solution:
     def isPalindrome(self, s: str) -> bool:
         s = s.lower()
