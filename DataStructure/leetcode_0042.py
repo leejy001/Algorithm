@@ -1,6 +1,6 @@
 from typing import List
 
-# 두 포인터 이용
+# 두 포인터 이용 44ms
 class Solution_one:
     def trap(self, height: List[int]) -> int:
         if not height:
@@ -32,7 +32,7 @@ class Solution_one:
                 cost += (left_max - height[i])
             return cost
 
-# 두 포인터 이용 (코드 간소화)
+# 두 포인터 이용 (코드 간소화) 56ms
 class Solution_two:
     def trap(self, height: List[int]) -> int:
         if not height:
@@ -53,7 +53,7 @@ class Solution_two:
                 right -= 1
         return cost
 
-# Stack 활용
+# Stack 활용 124ms
 class Solution:
     def trap(self, height: List[int]) -> int:
         stack = []
@@ -70,8 +70,11 @@ class Solution:
                     break
                 
                 # 이전과의 차이만큼 물 높이 처리
+                # 시작부터 변곡점까지의 길이
                 distance = i - stack[-1] - 1
+                # 시작부터 변곡점까지의 물의 깊이
                 waters = min(height[i], height[stack[-1]]) - height[top]
+                # 시작부터 변곡점까지의 비용
                 cost += distance * waters
                 print('distance :',distance, 'waters :',waters, 'cost :', cost)
             stack.append(i)
