@@ -20,7 +20,7 @@ class Solution_one:
                         
         return result
 
-# 두 포인터 방식 (스킵 조건 중요)
+# 두 포인터 방식 (스킵 조건 중요) 856ms
 class Solution_two:
     def threeSum(self, nums: List[int]) -> List[List[int]]:
         results=[]
@@ -45,4 +45,5 @@ class Solution_two:
                         right -= 1
                     left += 1
                     right -= 1
+
         return results
