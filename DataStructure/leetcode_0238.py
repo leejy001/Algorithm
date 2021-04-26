@@ -1,16 +1,17 @@
 from typing import List
 
+# 왼쪽 곱셈 값과 오른쪽 곱셈 값을 곱하기 232ms
 class Solution:
     def productExceptSelf(self, nums: List[int]) -> List[int]:
-        mul = []
-        start = 1
+        arr = []
+        mul = 1
         for i in range(len(nums)):
-            mul.append(start)
-            start = start * nums[i]
-            
-        start = 1
-        for i in range(len(nums)-1, -1, -1):
-            mul[i] = mul[i] * start
-            start = start * nums[i]
-            
-        return mul
+            arr.append(mul)
+            mul = mul * nums[i]
+
+        mul = 1
+        for i in range(len(nums) - 1, -1, -1):
+            arr[i] = arr[i] * mul
+            mul = mul * nums[i]
+
+        return arr
