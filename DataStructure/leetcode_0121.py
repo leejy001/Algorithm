@@ -13,12 +13,11 @@ class Solution_one:
         else:
             return profit
 
-# 저점과 현재 값과의 차이 계산
+# 저점과 현재 값과의 차이 계산 1084ms
 class Solution_two:
     def maxProfit(self, prices: List[int]) -> int:
         profit = 0
         min_price = 100000
-        max_price = 0
         
         for price in prices:
             min_price = min(min_price, price)
