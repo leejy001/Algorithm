@@ -7,7 +7,7 @@ class ListNode:
         self.val = val
         self.next = next
 
-# 내가 푼 풀이 Deque() 사용 68ms
+# 내가 푼 풀이 Deque 사용 68ms
 class Solution_one:
     def isPalindrome(self, head: ListNode) -> bool:
         deq = deque()
@@ -23,7 +23,7 @@ class Solution_one:
                 return False
         return True
 
-# 리스트 이용 160ms
+# List 이용 160ms
 class Solution_two:
     def isPalindrome(self, head: ListNode) -> bool:
         q: List = []
