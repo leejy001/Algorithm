@@ -6,7 +6,7 @@ class ListNode:
         self.val = val
         self.next = next
 
-# 내가 푼 풀이 40ms
+# 내가 푼 풀이 (list 사용) 40ms
 class Solution_one:
     def mergeTwoLists(self, l1: ListNode, l2: ListNode) -> ListNode:
         a: List = []
