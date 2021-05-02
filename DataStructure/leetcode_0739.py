@@ -1,6 +1,6 @@
 from typing import List
 
-# 스택을 이용한 풀이
+# 스택을 이용한 풀이 504ms
 class Solution:
     def dailyTemperatures(self, T: List[int]) -> List[int]:
         dist = [0]
