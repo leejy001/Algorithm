@@ -1,4 +1,4 @@
-# 내가 푼 풀이
+# 내가 푼 풀이 28ms
 class MyQueue_one:
 
     def __init__(self):
@@ -16,7 +16,7 @@ class MyQueue_one:
     def empty(self) -> bool:
         return len(self.st) == 0
 
-# Stack 2개 활용
+# Stack 2개 활용 32ms
 class MyQueue_two:
 
     def __init__(self):
