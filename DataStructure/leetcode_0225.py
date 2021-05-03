@@ -1,3 +1,6 @@
+import collections
+
+# deque을 이용하여 구현 24ms
 class MyStack:
 
     def __init__(self):
