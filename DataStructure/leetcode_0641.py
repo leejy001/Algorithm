@@ -3,6 +3,7 @@ class ListNode:
         self.val = x
         self.next = None
 
+# 원형 덱 76ms
 class MyCircularDeque:
 
     def __init__(self, k: int):
