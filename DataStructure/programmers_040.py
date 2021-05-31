@@ -23,3 +23,21 @@ def solution(prices):
                 answer[i] += 1
                 break
     return answer
+
+# 주식 가격이 처음으로 떨어지는 지점 계산
+def solution(p):
+    ans = [0] * len(p)
+    stack = [0]
+    for i in range(1, len(p)):
+        print(stack, ans)
+        if p[i] < p[stack[-1]]:
+            for j in stack[::-1]:
+                if p[i] < p[j]:
+                    ans[j] = i-j
+                    stack.remove(j)
+                else:
+                    break
+        stack.append(i)
+    for i in range(0, len(stack)-1):
+        ans[stack[i]] = len(p) - stack[i] - 1
+    return ans
