@@ -88,9 +88,9 @@ const a = one(2);
 const b = one(3);
 const c = one(4);
 
-console.log(a(10));
-console.log(b(10));
-console.log(c(10));
+console.log(a(10)); // 100
+console.log(b(10)); // 1000
+console.log(c(10)); // 10000
 ```
 
 **36. 구구단 출력하기**
@@ -104,7 +104,7 @@ function timesTable(num) {
   return arr;
 }
 
-console.log(timesTable(2));
+console.log(timesTable(2)); // 2 4 6 8 10 12 14 16 18
 ```
 
 **37. 반장 선거**
@@ -183,8 +183,8 @@ function changeChar(input, search, replace) {
   console.log(input.replace(search, replace));
 }
 
-changeChar("querty", "q", "e");
-changeChar("hqllo my namq is hyqwon", "q", "e");
+changeChar("querty", "q", "e"); // euerty
+changeChar("hqllo my namq is hyqwon", "q", "e"); // hello my namq is hyqwon
 ```
 
 **40. 놀이동산에 가자**
