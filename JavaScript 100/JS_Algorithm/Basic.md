@@ -190,3 +190,167 @@ function solution(str) {
 
 console.log(solution("BANANA"));
 ```
+
+### 문자 찾기
+
+```
+input : COMPUTERPROGRAMMING
+				R
+output : 3
+```
+
+```javascript
+function solution(str, char) {
+  return str.split(char).length - 1;
+}
+
+console.log(solution("COMPUTERPROGRAMMING", "R")); // 3
+```
+
+### 대문자 찾기
+
+input : KoreaTimeGood, output : 3
+
+```javascript
+function solution(str) {
+  let cnt = 0;
+  for (let char of str) {
+    if (char === char.toUpperCase()) cnt++;
+  }
+  return cnt;
+}
+
+console.log(solution("KoreaTimeGood")); // 3
+```
+
+### 대문자로 통일
+
+input : ItisTimeToStudy, output : ITISTIMETOSTUDY
+
+```javascript
+function solution(str) {
+  return str.toUpperCase();
+}
+
+console.log(solution("ItisTimeToStudy")); // ITISTIMETOSTUDY
+```
+
+### 대소문자 변환
+
+input : ItisTimeToStudy, output : iTIStIMEtOsTUDY
+input : StuDY, output : sTUdy
+
+```javascript
+function solution(str) {
+  let answer = "";
+  for (let char of str) {
+    if (char === char.toUpperCase()) {
+      answer += char.toLowerCase();
+    } else {
+      answer += char.toUpperCase();
+    }
+  }
+  return answer;
+}
+
+console.log(solution("ItisTimeToStudy")); // iTIStIMEtOsTUDY
+console.log(solution("StuDY")); // sTUdy
+```
+
+### 가장 긴 문자열
+
+input : ["teacher", "time", "student", "beautiful", "good"], output : beautiful
+
+```javascript
+function solution(arr) {
+  let max = "";
+  for (let str of arr) {
+    if (max.length < str.length) max = str;
+  }
+  return max;
+}
+
+console.log(solution(["teacher", "time", "student", "beautiful", "good"])); // beautiful
+```
+
+### 가운데 문자 출력
+
+input : study, output : u
+input : good, output : oo
+
+```javascript
+function solution(str) {
+  let mid = Math.floor(str.length / 2);
+  return str.length % 2 === 0 ? str.substr(mid - 1, 2) : str.substr(mid, 1);
+}
+
+console.log(solution("good")); // oo
+console.log(solution("study")); // u
+```
+
+```javascript
+function solution(str) {
+  let mid = Math.floor(str.length / 2);
+  return str.length % 2 === 0
+    ? str.substring(mid - 1, mid + 1)
+    : str.substring(mid, mid + 1);
+}
+
+console.log(solution("good")); // oo
+console.log(solution("study")); // u
+```
+
+### 중복문자제거
+
+input : ksekkset, output : kset
+
+```javascript
+function solution(str) {
+  let answer = "";
+  for (let char of str) {
+    if (!answer.includes(char)) answer += char;
+  }
+  return answer;
+}
+
+console.log(solution("ksekkset")); // kset
+```
+
+```javascript
+function solution(str) {
+  let answer = "";
+  for (let i = 0; i < str.length; i++) {
+    if (i === str.indexOf(str[i])) answer += str[i];
+  }
+  return answer;
+}
+
+console.log(solution("ksekkset")); // kset
+```
+
+### 중복단어제거
+
+input : ["good", "time", "good", "time", "student"]
+output : ["good", "time", "student"]
+
+```javascript
+function solution(arr) {
+  let set = [];
+  for (let str of arr) {
+    if (!set.includes(str)) set.push(str);
+  }
+  return set;
+}
+
+console.log(solution(["good", "time", "good", "time", "student"])); // ["good", "time", "student"]
+```
+
+```javascript
+function solution(arr) {
+  return arr.filter(function (value, idx) {
+    if (arr.indexOf(value) === idx) return value;
+  });
+}
+
+console.log(solution(["good", "time", "good", "time", "student"])); // ["good", "time", "student"]
+```
