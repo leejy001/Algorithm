@@ -3,7 +3,7 @@
 input : [1,3,5], [2,3,6,7,9]
 output : [1, 2, 3, 3, 5, 6, 7, 9]
 
-```jsx
+```javascript
 function solution(A, B) {
   return [...A, ...B].sort((a, b) => a - b);
 }
@@ -11,7 +11,7 @@ function solution(A, B) {
 console.log(solution([1, 3, 5], [2, 3, 6, 7, 9]));
 ```
 
-```jsx
+```javascript
 function solution(A, B) {
   let answer = [];
   let n = A.length;
@@ -35,7 +35,7 @@ console.log(solution([1, 3, 5], [2, 3, 6, 7, 9]));
 input : [1,3,9,5,2], [3,2,5,7,8]
 output : [2,3,5]
 
-```jsx
+```javascript
 function solution(A, B) {
   let answer = [];
   A.sort((a, b) => a - b);
@@ -65,7 +65,7 @@ console.log(solution([1, 3, 9, 5, 2], [3, 2, 5, 7, 8]));
 input : 6, [1,2,1,3,1,1,1,2]
 output : 3
 
-```jsx
+```javascript
 function solution(m, arr) {
   let answer = 0;
   let left = 0;
@@ -90,7 +90,7 @@ console.log(solution(6, [1, 2, 1, 3, 1, 1, 1, 2]));
 input : 5, [1,3,1,2,3]
 output : 10
 
-```jsx
+```javascript
 function solution(m, arr) {
   let answer = 0,
     sum = 0,
@@ -113,7 +113,7 @@ console.log(solution(5, [1, 3, 1, 2, 3]));
 input : 3, [12, 15, 11, 20, 25, 10, 20, 19, 13, 15]
 output : 56
 
-```jsx
+```javascript
 function solution(k, arr) {
   let answer = 0;
   let sum = 0;
@@ -133,7 +133,7 @@ console.log(solution(3, [12, 15, 11, 20, 25, 10, 20, 19, 13, 15]));
 
 input : BACBACCACCBDEDE, output : C
 
-```jsx
+```javascript
 function solution(str) {
   let hash = {};
   str.split("").map((item) => {
@@ -158,7 +158,7 @@ function solution(str) {
 console.log(solution("BACBACCACCBDEDE"));
 ```
 
-```jsx
+```javascript
 function solution(str) {
   let answer = "";
   let sH = new Map();
@@ -187,7 +187,7 @@ output : YES
 input : abaCC, Caaab
 output : NO
 
-```jsx
+```javascript
 function solution(A, B) {
   let answer = "YES";
   let sH = new Map();
@@ -213,7 +213,7 @@ console.log(solution("abaCC", "Caaab"));
 input : bacaAacba, abc
 output : 3 [{bac}, {acb}, {cba}]
 
-```jsx
+```javascript
 function compare(A, B) {
   if (A.size !== B.size) return false;
   for (let [key, val] of A) {
